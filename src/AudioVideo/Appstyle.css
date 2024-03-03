@@ -1,0 +1,24 @@
+h1, h2, .button-flex, .video-controls, .video-player, .upload-image, .audio-controls, .audio-player {
+    text-align: center;
+}
+button {
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px; 
+    margin-bottom: 10px;
+    padding: 8px 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    button {
+        margin-right: 5px; 
+    }
+}
+
+.audio-player {
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}

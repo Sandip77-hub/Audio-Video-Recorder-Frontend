@@ -5,7 +5,6 @@ import App from './App';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import Record from './Pages/Record';
-import Blog from './Pages/Blog';
 
 import {
     createBrowserRouter,
@@ -33,11 +32,6 @@ const router = createBrowserRouter([
         path: "record",
         element: <Record/>
     },
-    {
-        path: "blog",
-        element: <Blog/>
-    },
-
 
 ]);
 

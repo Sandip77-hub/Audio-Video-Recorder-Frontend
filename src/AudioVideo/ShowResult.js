@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import "./ShowResult.css";
 
 const ShowResult = () => {
   const [result, setResult] = useState(null);
@@ -34,14 +33,13 @@ const ShowResult = () => {
         method: 'POST',
         body: formData,
       });
-      // Handle response from the backend if needed
     } catch (error) {
       console.error('Error uploading video:', error);
     }
   };
 
   return (
-    <div>
+    <div className='upload-image'>
       
       <div>
         <input type="file" onChange={handleFileChange} accept="video/*" />
