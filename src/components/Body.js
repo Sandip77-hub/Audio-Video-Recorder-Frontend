@@ -1,11 +1,13 @@
+
 import React from 'react';
 import Beautiful from './beautiful image.jpg';
+
 
 export default function Body() {
     return (
         <div className="container">
             <img src={Beautiful} alt="Beautiful" className="background-image" />
-            <p className="text">Love, Preserve and Conserve Wildlife.</p>
+            <p className="text">Love,Protect,Preserve Wildlife.</p>
             <style>
             {`
                 .container {
@@ -30,8 +32,10 @@ export default function Body() {
                     transform: translate(-50%, -50%);
                     font-size: 30px;
                     color: revert-layer;
-                    margin-left:550px;
+                    margin-top:25px;
+                    margin-left:650px;
                     margin-bottom:500px;
+                    text-transform:uppercase;
                 }
             `}
             </style>

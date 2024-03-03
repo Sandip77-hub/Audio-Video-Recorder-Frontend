@@ -92,7 +92,6 @@ const VideoRecorder = () => {
                     body: formData,
                 });
 
-                // Handle the response from the backend as needed
             } catch (error) {
                 console.error('Error sending video data to backend:', error);
             }
