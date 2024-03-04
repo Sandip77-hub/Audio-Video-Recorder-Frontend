@@ -33,6 +33,7 @@ export default function Contact() {
                     <input type="email" />
                     <label>Message:</label>
                     <textarea></textarea>
+                    <br></br>
                     <button type="submit">Submit</button>
                 </form>
             </div>

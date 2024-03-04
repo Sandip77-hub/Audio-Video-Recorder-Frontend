@@ -104,7 +104,7 @@ const AudioRecorder = () => {
 				{audio ? (
 					<div className="audio-player">
 						<audio src={audio} controls></audio>
-						<a download href={audio}>
+						<a download href={audio} className="download-link">
 							Download Recording
 						</a>
 					</div>

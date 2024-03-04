@@ -54,7 +54,7 @@ const ShowResult = () => {
           </video>
         </div>
       )}
-      <h2>Display Result</h2>
+      <h2 className='display-item'>Display Result</h2>
       <button onClick={fetchData}>Show Result</button>
       {result && (
         <div>

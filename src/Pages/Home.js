@@ -25,7 +25,7 @@ const Home = () => {
           data analytics, aid in identifying species and monitoring biodiversity. They foster wonder and
           connection by revealing hidden wildlife behavior patterns. Embracing wildlife recognition is essential
           for conservation efforts. Together, let's safeguard biodiversity and create a brighter future.</p>
-        <h3 className='feature'>App Features.</h3>
+        <h3 className='feature'>SAVE,PRESERVE AND CONSERVE WILDLIFE.</h3>
         <p className='purpose'>
           WildTrack AI model make it easy to collect and manage your observation.
         </p>
