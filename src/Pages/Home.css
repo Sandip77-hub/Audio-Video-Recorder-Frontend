@@ -15,8 +15,9 @@
     height: 180px;
     margin-top: 15px;
     border-radius: 3px;
-    padding: 0 20px;
+    padding: 0 15px;
     border-radius: 40%;
+    margin-right: 20px;
 }
 .manage_paragraph{
     flex: 1;

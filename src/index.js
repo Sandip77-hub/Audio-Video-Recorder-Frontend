@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style.css';
 import App from './App';
-import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import Record from './Pages/Record';
 
@@ -22,7 +21,7 @@ const router = createBrowserRouter([
     },
     {
         path: "home",
-        element: <Home />,
+        element: <App />,
     },
     {
         path: "contact",
