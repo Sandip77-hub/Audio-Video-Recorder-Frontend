@@ -11,6 +11,17 @@ nav {
   background-color: rgb(61, 150, 223);
   text-transform: uppercase;
 }
+.nav-link {
+  text-decoration: none;
+  color: #fc0000;
+  margin-right: 20px; 
+  transition: color 0.3s ease; 
+}
+
+.nav-link:hover {
+  color: #000000; 
+}
+
 
 .flex-container{
   align-items: center;

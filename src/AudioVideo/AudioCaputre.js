@@ -16,6 +16,7 @@ const AudioRecorder = () => {
 	const [audioChunks, setAudioChunks] = useState([]);
 
 	const getMicrophonePermission = async () => {
+		setAudio(null);
 		if ("MediaRecorder" in window) {
 			try {
 				const mediaStream = await navigator.mediaDevices.getUserMedia({
@@ -33,6 +34,7 @@ const AudioRecorder = () => {
 	};
 
 	const startRecording = async () => {
+		
 		setRecordingStatus("recording");
 		const media = new MediaRecorder(stream, { type: mimeType });
 
@@ -52,6 +54,7 @@ const AudioRecorder = () => {
 	};
 
 	const stopRecording = async () => {
+		setPermission(false);
 		setRecordingStatus("inactive");
 		mediaRecorder.current.stop();
 		if (stream) {
@@ -73,11 +76,7 @@ const AudioRecorder = () => {
 			setAudio(audioUrl);
 			setAudioChunks([]);
 		};
-		// Reset media recorder and stream objects
-		mediaRecorder.current = null;
-		setStream(null);
-		// Reset audio state
-		setAudio(null);
+		
 	};
 	
 	
