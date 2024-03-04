@@ -43,7 +43,7 @@ const ShowResult = () => {
       
       <div>
         <input type="file" onChange={handleFileChange} accept="video/*" />
-        <button onClick={handleUpload}>Upload Video</button>
+        <button onClick={handleUpload}>Upload</button>
       </div>
       {selectedFile && (
         <div>
