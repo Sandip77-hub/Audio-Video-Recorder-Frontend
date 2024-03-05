@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import Result from './Result';
 
 const ShowResult = () => {
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (event) => {
@@ -19,20 +20,13 @@ const ShowResult = () => {
     formData.append('video', selectedFile);
 
     try {
-      const response = await fetch('YOUR_UPLOAD_API_ENDPOINT', {
+      const response = await fetch('http://localhost:5200/api/v1/output/video', {
         method: 'POST',
         body: formData,
       });
-      
-      // Check if the upload was successful
-      if (response.ok) {
-        // If successful, fetch the result data from the backend
-        const resultResponse = await fetch('YOUR_RESULT_API_ENDPOINT'); // Adjust the result endpoint URL
-        const resultData = await resultResponse.json();
-        setResult(resultData);
-      } else {
-        console.error('Error uploading video:', response.status);
-      }
+      const response_json = await response.json()
+      setResult(response_json.data.finalData)
+
     } catch (error) {
       console.error('Error uploading video:', error);
     }
@@ -54,9 +48,9 @@ const ShowResult = () => {
         </div>
       )}
       <h2 className='display-item'>Display Result</h2>
-      {result && (
+      {result.length > 0 && (
         <div>
-          {/* Display the result data here */}
+          <Result result={result} />
         </div>
       )}
     </div>
@@ -64,4 +58,3 @@ const ShowResult = () => {
 };
 
 export default ShowResult;
-
