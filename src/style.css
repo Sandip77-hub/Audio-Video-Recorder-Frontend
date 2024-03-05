@@ -1,4 +1,4 @@
-/* Navbar.css */
+
 
 body {
   background-color: antiquewhite;
@@ -13,7 +13,7 @@ nav {
   box-shadow: 0px 2.98256px 7.4564px rgba(7, 7, 7, 0.1);
   background-color: rgb(61, 150, 223);
   text-transform: uppercase;
-  position: relative; /* Add relative positioning for the menu icon */
+  position: relative;
 }
 
 .flex-container {
@@ -98,8 +98,8 @@ a:hover > span {
     }
   }
 
-  /* Adjust the menu icon position when the navbar is active */
+
   .navbar-menu.active .menu-icon {
-    right: calc(100% - 40px); /* Adjust the right position to align with the right edge of the navbar */
+    right: calc(100% - 40px); 
   }
 }

@@ -1,23 +1,12 @@
-import React, { useState,useRef } from 'react';
+import React, { useState } from 'react';
 
 const ShowResult = () => {
   const [result, setResult] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch('YOUR_BACKEND_API_ENDPOINT');
-      const data = await response.json();
-      setResult(data);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
-
   };
 
   const handleUpload = async () => {
@@ -34,6 +23,16 @@ const ShowResult = () => {
         method: 'POST',
         body: formData,
       });
+      
+      // Check if the upload was successful
+      if (response.ok) {
+        // If successful, fetch the result data from the backend
+        const resultResponse = await fetch('YOUR_RESULT_API_ENDPOINT'); // Adjust the result endpoint URL
+        const resultData = await resultResponse.json();
+        setResult(resultData);
+      } else {
+        console.error('Error uploading video:', response.status);
+      }
     } catch (error) {
       console.error('Error uploading video:', error);
     }
@@ -41,7 +40,6 @@ const ShowResult = () => {
 
   return (
     <div className='upload-image'>
-      
       <div>
         <input type="file" onChange={handleFileChange} accept="video/*" />
         <button onClick={handleUpload}>Upload</button>
@@ -49,21 +47,16 @@ const ShowResult = () => {
       {selectedFile && (
         <div>
           <h3>Selected Video:</h3>
-          <video  controls width="400">
+          <video controls width="400">
             <source src={URL.createObjectURL(selectedFile)} type={selectedFile.type} />
             Your browser does not support the video tag.
           </video>
         </div>
       )}
       <h2 className='display-item'>Display Result</h2>
-      <button onClick={fetchData}>Show Result</button>
       {result && (
         <div>
-          {typeof result === 'string' ? (
-            <p>{result}</p>
-          ) : (
-            <img src={result.imageUrl} alt="Result" />
-          )}
+          {/* Display the result data here */}
         </div>
       )}
     </div>
@@ -71,3 +64,4 @@ const ShowResult = () => {
 };
 
 export default ShowResult;
+

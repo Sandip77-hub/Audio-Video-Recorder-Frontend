@@ -25,17 +25,17 @@ const router = createBrowserRouter([
     },
     {
         path: "contact",
-        element: <Contact/>
+        element: <Contact />
     },
     {
         path: "record",
-        element: <Record/>
+        element: <Record />
     },
 
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
 );
 
