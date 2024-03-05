@@ -1,5 +1,4 @@
-h1, h2, .button-flex, .video-controls, .video-player, .upload-image, .audio-controls,
- .audio-player {
+h1, h2, .button-flex, .video-controls, .video-player, .upload-image{
     text-align: center;
 }
 button {
@@ -24,17 +23,11 @@ button {
     }
 }
 
-.audio-player {
-    margin-top: 20px;
-    margin-bottom: 20px; 
-}
-
 
 .video-player {
     text-align: center;
     margin-top: 20px; 
 }
-.audio-player,
 .video-player,
 .recorded-player {
 	display: flex;

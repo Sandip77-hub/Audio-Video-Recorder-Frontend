@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 
 const ShowResult = () => {
   const [result, setResult] = useState(null);
@@ -17,6 +17,7 @@ const ShowResult = () => {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
+
   };
 
   const handleUpload = async () => {
@@ -48,7 +49,7 @@ const ShowResult = () => {
       {selectedFile && (
         <div>
           <h3>Selected Video:</h3>
-          <video controls width="400">
+          <video  controls width="400">
             <source src={URL.createObjectURL(selectedFile)} type={selectedFile.type} />
             Your browser does not support the video tag.
           </video>

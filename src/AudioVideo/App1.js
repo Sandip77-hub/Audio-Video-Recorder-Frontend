@@ -1,7 +1,6 @@
 import "./Appstyle.css";
 import { useState } from "react";
 import VideoCapture from "./VideoCapture";
-import AudioCapture from "./AudioCaputre";
 import ShowResult from "./ShowResult";
 
 const App = () => {
@@ -17,11 +16,10 @@ const App = () => {
 		<div>
 			<h1>Audio and Video Recorder</h1>
 			<div className="button-flex">
-				<button  onClick={toggleRecordOption("video")}>Record Video</button>
-				<button onClick={toggleRecordOption("audio")}>Record Audio</button>
+				<button  onClick={toggleRecordOption("video")}>Go Live</button>
 			</div>
 			<div>
-				{recordOption === "video" ? <VideoCapture/> : <AudioCapture />}
+				{<VideoCapture/>}
 				
 			</div>
 			<ShowResult/>
