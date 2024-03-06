@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Result.css"
 
 const Result = ({ result }) => {
-
-
   return (
-    <div id="result-container">
-      {result.map(item => {
-        return (
-          <div className='key-value'>
-            <div className="key">{item[0]} sec:  </div>
-            <div className="value"><b>{item[1]}</b></div>
-          </div>
-        )
-      })}
-
+    <div className="result-table">
+      {result.map((item, index) => (
+        <div className='row' key={index}>
+          <div className="cell key">{item[0]} sec:</div>
+          <div className="cell value"><b>{item[1]}</b></div>
+        </div>
+      ))}
     </div>
   );
 };

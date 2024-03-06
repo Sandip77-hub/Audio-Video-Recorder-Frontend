@@ -1,14 +1,26 @@
-.key-value {
-    display: flex;
-    justify-content: center; 
+.result-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
     margin-bottom: 10px;
-}
-
-.key {
+  }
+  
+  .row {
+    display: table-row;
+  }
+  
+  .cell {
+    display: table-cell;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .key {
     font-weight: bold;
     color: #333;
-}
-
-.value {
+  }
+  
+  .value {
     color: #666;
-}
+  }
+  
