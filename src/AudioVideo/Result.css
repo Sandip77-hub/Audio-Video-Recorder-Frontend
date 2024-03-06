@@ -1,8 +1,9 @@
 .result-table {
     display: table;
-    width: 100%;
+    width: 50%;
     border-collapse: collapse;
     margin-bottom: 10px;
+    margin-left: 27%;
   }
   
   .row {
