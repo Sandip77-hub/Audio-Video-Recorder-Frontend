@@ -14,7 +14,9 @@ const App = () => {
 
 	return (
 		<div>
-			<h1>Audio and Video Recorder</h1>
+			<div className="mid">
+			<h1 className="content-marq">Audio and Video Recorder</h1>
+			</div>
 			<div className="button-flex">
 				<button  onClick={toggleRecordOption("video")}>Go Live</button>
 			</div>
