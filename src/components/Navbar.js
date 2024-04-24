@@ -17,7 +17,6 @@ const Navbar = () => {
   };
 
   const handleSoundEnded = () => {
-    // Restart the audio playback when it finishes
     if (audioRef.current) {
       audioRef.current.currentTime = 0; // Reset currentTime to restart playback
       audioRef.current.play();
@@ -33,7 +32,7 @@ const Navbar = () => {
     <nav>
       <h1>Wildlife Surveillance</h1>
       <div className={`flex-container ${isOpen ? 'show' : ''}`}>
-        <Link to="/" onClick={toggleMenu} onClick={handleItemClick}>Home</Link>
+        <Link to="/" onClick={handleItemClick}>Home</Link>
         <Link to="/record">Record</Link>
         <Link to="/contact" onClick={toggleMenu}>Contact</Link>
         <audio ref={audioRef} src={clickSound} onEnded={handleSoundEnded} />
